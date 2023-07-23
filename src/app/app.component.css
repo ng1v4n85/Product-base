@@ -1,0 +1,11 @@
+:host {
+    display: flex;
+    justify-content: center;
+}
+  
+:host > div {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+  

@@ -1,0 +1,59 @@
+.img-container {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+img {
+    object-fit: cover;
+}
+
+h3 {
+    font-size: 20px;
+    color:#3d3d3d ;
+    padding-top: 20px;
+    text-align: center;
+}
+
+p {
+    color: rgb(134, 37, 74);
+    padding: 10px;
+    text-align: center;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    margin: 10px 5px 15px 5px;
+    padding: 6px 24px;
+    color: rgb(242, 243, 245);
+    background-color: rgb(17, 46, 209);
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(33, 63, 228);
+}
+
+.btn-del {
+    background-color: rgb(196, 2, 2);
+}
+
+.btn-del:hover {
+    background-color: rgb(226, 13, 13);
+}
+
+.btn-edit {
+    background-color: rgb(13, 151, 0);
+}
+
+.btn-edit:hover {
+    background-color: rgb(15, 175, 0);
+}

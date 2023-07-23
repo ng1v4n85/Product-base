@@ -1,0 +1,66 @@
+<h1>Edit Product</h1>
+<div *ngIf="product" class="container">
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Product Name</label>
+      <input type="text" id="title" required formControlName="title" />
+      <div class="req"
+        *ngIf="
+          productForm.controls['title'].invalid &&
+          productForm.controls['title'].touched
+        "
+      >
+        *Product name is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea id="description" formControlName="description"></textarea>
+      <div class="req"
+        *ngIf="
+          productForm.controls['description'].invalid &&
+          productForm.controls['description'].touched
+        "
+      >
+        *Description is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="number" id="price" formControlName="price" />
+      <div class="req"
+        *ngIf="
+          productForm.controls['price'].invalid &&
+          productForm.controls['price'].touched
+        "
+      >
+        Price is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="brand">Brand</label>
+      <input type="text" id="brand" required formControlName="brand" />
+      <div class="req"
+        *ngIf="
+          productForm.controls['brand'].invalid &&
+          productForm.controls['brand'].touched
+        "
+      >
+        Brand is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="category">Category</label>
+      <input type="text" id="category" required formControlName="category" />
+      <div class="req"
+        *ngIf="
+          productForm.controls['category'].invalid &&
+          productForm.controls['category'].touched
+        "
+      >
+        Category is required.
+      </div>
+    </div>
+    <button type="submit" [disabled]="productForm.invalid">Save Changes</button>
+  </form>
+</div>

@@ -1,0 +1,25 @@
+<div *ngIf="product" class="product-details">
+  <button [routerLink]="['']" class="back">Go back</button>
+  <h2>{{ product.title }}</h2>
+  <p id="desc">{{ product.description }}</p>
+  <div class="prop">
+    <div>
+      <p>Price: {{ product.price }}</p>
+      <p>Rating: {{ product.rating }}</p>
+      <p>Stock: {{ product.stock }}</p>
+      <p>Brand: {{ product.brand }}</p>
+      <p>Category: {{ product.category }}</p>
+    </div>
+    <div>
+      <button [routerLink]="['..', 'edit', product.id]">Edit</button>
+      <button (click)="onDelete(product.id)" class="btn-del">Delete</button>
+    </div>
+  </div>
+  <div class="product-images">
+    <img
+      *ngFor="let image of product.images"
+      [src]="image"
+      alt="Product Image"
+    />
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="container">
+<h1>Product List</h1>
+<div class="add-btn">
+  <button class="btn add-btn" routerLink="new">Add Product</button>
+</div>
+  <ul class="product-grid">
+    <li *ngFor="let product of products" class="product">
+      <ng-container *ngIf="product">
+        <app-product-list-item [product]="product" (deleteProduct)="onDeleteProduct($event)"></app-product-list-item>
+      </ng-container>
+    </li>
+  </ul>
+</div>

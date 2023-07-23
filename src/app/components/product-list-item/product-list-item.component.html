@@ -1,0 +1,12 @@
+<div class="img-container">
+  <img [src]="product.thumbnail" alt="{{ product.title }}" />
+</div>
+<div>
+  <h3>{{ product.title }}</h3>
+  <p>Price: {{ product.price }}</p>
+  <div class="btn-container">
+    <button class="btn" [routerLink]="[product.id]">View Details</button>
+    <button class="btn btn-edit" [routerLink]="['edit', product.id]">Edit</button>
+    <button class="btn btn-del" (click)="onDelete()">Delete</button>
+  </div>
+</div>
